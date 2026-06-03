@@ -6,7 +6,7 @@ let visitorCount = 0;
 app.get("/", (req, res) => {
 visitorCount++;
 res.send(`
-<h1>DevOps Project Updated</h1>
+<h1>DevOps Project Running Successfully</h1>
 <p>Timestamp: ${new Date()}</p>
 <p>Visitor Count: ${visitorCount}</p>
 <p>Container ID: ${os.hostname()}</p>
