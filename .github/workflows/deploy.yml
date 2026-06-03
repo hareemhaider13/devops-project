@@ -12,8 +12,8 @@ jobs:
     steps:
     - name: Checkout Code
       uses: actions/checkout@v4
-      
-      - name: Set up Docker Buildx
+
+    - name: Set up Docker Buildx
       uses: docker/setup-buildx-action@v3
 
     - name: Configure AWS Credentials
@@ -38,10 +38,9 @@ jobs:
     - name: Push Docker Image
       run: |
         docker push 805778285513.dkr.ecr.eu-north-1.amazonaws.com/devops-project:latest
-        
-         - name: Verify ECR Push
+
+    - name: Verify ECR Push
       run: |
         aws ecr describe-images \
         --repository-name devops-project \
         --region eu-north-1
-       
