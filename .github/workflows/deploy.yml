@@ -12,6 +12,7 @@ jobs:
     steps:
     - name: Checkout Code
       uses: actions/checkout@v4
+      
       - name: Set up Docker Buildx
       uses: docker/setup-buildx-action@v3
 
@@ -37,6 +38,7 @@ jobs:
     - name: Push Docker Image
       run: |
         docker push 805778285513.dkr.ecr.eu-north-1.amazonaws.com/devops-project:latest
+        
          - name: Verify ECR Push
       run: |
         aws ecr describe-images \
